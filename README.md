@@ -6,6 +6,20 @@ This is when I decided to look more at manipulating imagery using CSS, HTML, and
 
 The cool thing about using CSS rather than simply an SVG is it givs us full control of the element programatically. Rather than having multiple SVGs of different colors we can have a single element of which we can change the color on the fly. This is the power of CSS.
 
-# Mustache
+<hr />
+
+# Previews
+
+<details>
+    <summary>Mustache</summary>
 
 ![Mustache](./Mustache/mustache.gif)
+
+</details>
+
+<details>
+    <summary>Character</summary>
+
+![Character](./Character/character.gif)
+
+</details>
