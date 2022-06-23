@@ -23,3 +23,10 @@ The cool thing about using CSS rather than simply an SVG is it givs us full cont
 ![Character](./Character/character.gif)
 
 </details>
+
+<details>
+    <summary>Cacti</summary>
+
+![Cacti](./Cacti/cacti.gif)
+
+</details>

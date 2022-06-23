@@ -1,0 +1,288 @@
+/* Palette */
+:root {
+    --background: #7bd3f7;
+    --circle: #F9E0AE;
+    --pot: #835050;
+    --cactus: #799351;
+    --cactus-lines: #335D2D;
+    --black: #000000;
+    --white: #FFFFFF;
+    --cheeks: #FFC0CB;
+    --cream-white: #FCF1F1;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.canvas {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+    width: 100vw;
+    height: 100vh;
+}
+
+.circle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: var(--circle);
+    height: 80vmin;
+    width: 80vmin;
+    border-radius: 50%;
+}
+
+.pot {
+    position: absolute;
+    border-bottom: 25vmin solid var(--pot);
+    border-left: 7vmin solid transparent;
+    border-right: 7vmin solid transparent;
+    height: 0;
+    width: 40vmin;
+    transform: rotate(180deg);
+    bottom: 15vmin;
+    border-radius: 3vmin;
+}
+
+.pot::after {
+    content: "";
+    position: absolute;
+    width: 26vmin;
+    height: 1vmin;
+    background: var(--black);
+}
+
+.eyes {
+    position: absolute;
+    width: 5vmin;
+    height: 5vmin;
+    background: var(--black);
+    border-radius: 50%;
+    bottom: -15vmin;
+    right: 18vmin;
+    box-shadow:
+        13vmin 0 currentColor;
+    animation: blink 3s infinite;
+}
+
+.cheeks {
+    position: absolute;
+    width: 5vmin;
+    height: 2vmin;
+    top: 8vmin;
+    left: 2vmin;
+    background: var(--cheeks);
+    border-radius: 50%;
+    box-shadow:
+        15vmin 0 var(--cheeks);
+    opacity: 60%;
+}
+
+.mouth {
+    position: absolute;
+    width: 4vmin;
+    height: 4vmin;
+    top: 8vmin;
+    left: 10vmin;
+    border-radius: 50%;
+    background: transparent;
+    border-top: 1vmin solid var(--black);
+    animation: smile 3s infinite;
+}
+
+.cactus {
+    position: relative;
+    width: 17vmin;
+    height: 30vmin;
+    background: var(--cactus);
+    border-radius: 45%;
+    top: 15vmin;
+    right: 6vmin;
+    border: 1vmin solid var(--black);
+    animation: tingleLeft 3s infinite;
+}
+
+.cactus::before {
+    content: "";
+    position: absolute;
+    width: 5vmin;
+    height: 30vmin;
+    background: transparent;
+    border-radius: 50%;
+    border-right: 1vmin solid var(--cactus-lines);
+    left: 6vmin;
+}
+
+.cactus::after {
+    content: "";
+    position: absolute;
+    width: 5vmin;
+    height: 30vmin;
+    right: 6vmin;
+    background: transparent;
+    border-radius: 50%;
+    border-left: 1vmin solid var(--cactus-lines);
+}
+
+.cactusSmall {
+    position: absolute;
+    width: 15vmin;
+    height: 20vmin;
+    border-radius: 45%;
+    border: 1vmin solid var(--black);
+    background: var(--cactus);
+    top: 25vmin;
+    right: 25vmin;
+    animation: tingleRight 3s infinite;
+}
+
+.cactusSmall::after {
+    content: "";
+    position: absolute;
+    width: 5vmin;
+    height: 30vmin;
+    right: 5vmin;
+    background: transparent;
+    border-radius: 50%;
+    border-left: 1vmin solid var(--cactus-lines);
+}
+
+.cactusSmall::before {
+    content: "";
+    position: absolute;
+    width: 5vmin;
+    height: 30vmin;
+    left: 5vmin;
+    background: transparent;
+    border-radius: 50%;
+    border-right: 1vmin solid var(--cactus-lines);
+}
+
+.spines {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 1vmin solid transparent;
+    border-right: 1vmin solid transparent;
+    border-bottom: 7vmin solid var(--cactus-lines);
+    transform: rotate(-45deg);
+}
+
+.spines::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 1vmin solid transparent;
+    border-right: 1vmin solid transparent;
+    border-bottom: 7vmin solid var(--cactus-lines);
+    transform: rotate(90deg);
+    top: 5vmin;
+    left: 9vmin;
+}
+
+.spines::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 1vmin solid transparent;
+    border-right: 1vmin solid transparent;
+    border-bottom: 7vmin solid var(--cactus-lines);
+    transform: rotate(360deg);
+    top: 7vmin;
+    left: -10vmin;
+}
+
+.spinesRight {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 5vmin;
+    left: -2vmin;
+    border-left: 1vmin solid transparent;
+    border-right: 1vmin solid transparent;
+    border-bottom: 7vmin solid var(--cactus-lines);
+    transform: rotate(-45deg);
+}
+
+.spinesRight::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 3vmin;
+    left: 15vmin;
+    border-left: 1vmin solid transparent;
+    border-right: 1vmin solid transparent;
+    border-bottom: 7vmin solid var(--cactus-lines);
+    transform: rotate(90deg);
+}
+
+.spinesRight::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 10vmin;
+    left: 6vmin;
+    border-left: 1vmin solid transparent;
+    border-right: 1vmin solid transparent;
+    border-bottom: 7vmin solid var(--cactus-lines);
+    transform: rotate(90deg);
+}
+
+@keyframes tingleRight {
+    0% {
+        transform: rotate(1, 1);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(1, 1);
+    }
+}
+
+@keyframes tingleLeft {
+    0% {
+        transform: rotate(1, 1);
+    }
+    50% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(1, 1);
+    }
+}
+
+@keyframes blink {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1, 0.1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes smile {
+    0% {
+        transform: scaleX(1)
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
