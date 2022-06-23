@@ -1,0 +1,78 @@
+:root {
+    --background: #233637;
+    --primary: #1FB67C;
+    --secondary: #20BC7D;
+    --tertiary: #26C893;
+    --quaternary: #55DDB9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--background);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emerald {
+    position: relative;
+    width: 20vmin;
+    height: 20vmin;
+    transform: rotate(45deg);
+}
+
+span:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 5vmin solid transparent;
+    border-right: 5vmin solid var(--secondary);
+    border-bottom: 5vmin solid var(--tertiary);
+    border-left: 5vmin solid transparent;
+}
+
+span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 10vmin;
+    width: 0;
+    height: 0;
+    border-top: 5vmin solid var(--primary);
+    border-right: 5vmin solid var(--secondary);
+    border-bottom: 5vmin solid var(--tertiary);
+    border-left: 5vmin solid var(--quaternary);
+}
+
+span:nth-child(3) {
+    position: absolute;
+    top: 10vmin;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 5vmin solid var(--primary);
+    border-right: 5vmin solid var(--secondary);
+    border-bottom: 5vmin solid var(--tertiary);
+    border-left: 5vmin solid var(--quaternary);
+}
+
+span:last-child {
+    position: absolute;
+    top: 10vmin;
+    left: 10vmin;
+    width: 0;
+    height: 0;
+    border-top: 5vmin solid var(--primary);
+    border-right: 5vmin solid var(--secondary);
+    border-bottom: 5vmin solid var(--tertiary);
+    border-left: 5vmin solid var(--quaternary);
+}
